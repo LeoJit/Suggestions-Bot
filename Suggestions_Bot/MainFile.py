@@ -9,8 +9,7 @@ import random
 import json
 import os
 
-file= open(r"C:\Users\leoji\Desktop\Python\Suggestions_Bot\Token", "r")
-token=str(file.read())
+
 
 client=commands.Bot(command_prefix=',') 
 path = os.path.dirname(os.path.realpath(__file__)) + "/"
@@ -41,8 +40,7 @@ for filename in os.listdir(r"C:\Users\leoji\Desktop\Python\Suggestions_Bot\Cogs"
     if filename.endswith(".py"):
         client.load_extension(f"Cogs.{filename[:-3]}")
 
-
-
-
+file= open(f"{self.path}Token", "r")
+token=str(file.read())
 
 client.run(token)
