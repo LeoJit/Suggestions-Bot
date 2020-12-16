@@ -40,4 +40,4 @@ for filename in os.listdir(r"C:\Users\leoji\Desktop\Python\Suggestions_Bot\Cogs"
 
 
 
-client.run("Nzg1ODUyNzYzMjkxNzc5MDgy.X894aw.yFmhkIY5zTVMLwDxc0Wb2M_GBWI")
+client.run()
