@@ -40,7 +40,7 @@ for filename in os.listdir(r"C:\Users\leoji\Desktop\Python\Suggestions_Bot\Cogs"
     if filename.endswith(".py"):
         client.load_extension(f"Cogs.{filename[:-3]}")
 
-file= open(f"{self.path}Token", "r")
+file= open(f"{path}Token", "r")
 token=str(file.read())
 
 client.run(token)
