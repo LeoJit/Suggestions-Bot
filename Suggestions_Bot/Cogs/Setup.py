@@ -5,7 +5,6 @@ from discord.ext import commands
 from discord.ext.commands import has_permissions, MissingPermissions
 from discord.ext.commands import bot
 import asyncio
-import random
 import json
 import os
 
