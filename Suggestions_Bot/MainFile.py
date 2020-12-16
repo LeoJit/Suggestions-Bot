@@ -36,7 +36,7 @@ async def reload(ctx, extension):
     client.load_extension(f"Cogs.{extension}")
     await ctx.send(f"Reloaded {extension} 🔃")
 
-for filename in os.listdir(r"C:\Users\leoji\Desktop\Python\Suggestions_Bot\Cogs"):
+for filename in os.listdir(f"{path}Cogs"):
     if filename.endswith(".py"):
         client.load_extension(f"Cogs.{filename[:-3]}")
 
