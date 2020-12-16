@@ -1,1 +1,11 @@
+async-timeout==3.0.1
+Cogs==0.4.4
+DateTime==4.3
+discord.py==1.5.1
+oauth2client==4.1.3
+oauthlib==3.1.0
+Pillow==8.0.1
+python-dateutil==2.8.1
+requests==2.25.0
+requests-oauthlib==1.3.0
 
