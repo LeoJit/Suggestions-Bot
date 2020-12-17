@@ -68,7 +68,7 @@ class AdminCommands(commands.Cog):
         await channel_logs.send(content=None, embed=approval_embed)
 
         user_id= uid_dict[str(id)]
-        user= self.client.fetch_user(user_id)
+        user= await self.client.fetch_user(user_id)
         await user.send("Hello. Your suggestion has been approved")
         await user.send(content=None, embed= approval_embed)
 
@@ -104,7 +104,7 @@ class AdminCommands(commands.Cog):
         await channel_logs.send(content=None, embed=denial_embed)
 
         user_id= uid_dict[str(id)]
-        user= self.client.fetch_user(user_id)
+        user= await self.client.fetch_user(user_id)
         await user.send("Hello. Your suggestion has been denied")
         await user.send(content=None, embed= denial_embed)
 
