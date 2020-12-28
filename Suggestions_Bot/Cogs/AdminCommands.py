@@ -350,7 +350,7 @@ class AdminCommands(commands.Cog):
         
     @commands.command()
     async def add_role(self, ctx, role:discord.Role, *args:discord.Member):
-        guild= ctx.get_guild()
+        guild= ctx.guild.id
         role1= ctx.guild.get_role(role)
         for i in range(len(args)):
             await args[i].add_roles(role)
