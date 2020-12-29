@@ -349,12 +349,13 @@ class AdminCommands(commands.Cog):
         await channel_mods.send(f"You will be reminded daily at `{time.content}` UTC :)")
         
     @commands.command()
-    async def add_role(self, ctx, role:discord.Role, *args:discord.Member):
-        guild= ctx.guild.id
-        role1= ctx.guild.get_role(role)
-        for i in range(len(args)):
-            await args[i].add_roles(role)
-        await ctx.send("Added role")
+    async def add(self, ctx, role: discord.Role, *users: int):
+        ids = [member.id for member in ctx.guild.members] 
+        for user in users:
+            if user in ids:
+                member = await ctx.guild.fetch_member(user)
+                await member.add_roles(role)
+        await ctx.send("Added 👍")
 
 def setup(client):
     client.add_cog(AdminCommands(client))
